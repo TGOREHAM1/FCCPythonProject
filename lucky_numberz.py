@@ -5,11 +5,24 @@
 
 lucky_numbers = [49, 8, 27, 16, 56, 42]
 print("The winning lottery numbers are: " + str(lucky_numbers))
-missing_number = int(input("What number did I forget? "))
-lucky_numbers.append(missing_number)
-print("The winning lottery numbers are actually: " + str(lucky_numbers))
-lucky_numbers.insert(0, int(input("Oops, what should have been first? ")))
-print("The winning lottery numbers are actually: " + str(lucky_numbers))
+while True:
+    missing_number = input("What number did I forget? ")
+    try:
+        missing_number_int = int(missing_number)
+        lucky_numbers.append(missing_number_int)
+        print("The winning lottery numbers are actually: " + str(lucky_numbers))
+        break
+    except ValueError:
+        print("That's not a number. Try again.")
+while True:
+    insert_num = input("Oops, what should have been first? ")
+    try:
+        insert_num_int = int(insert_num)
+        lucky_numbers.insert(0, insert_num_int)
+        print("The winning lottery numbers are actually: " + str(lucky_numbers))
+        break
+    except ValueError:
+        print("That's not a number. Try again.")
 while True:
     remove_num = input("Ok, one number was wrong... which one? ")
     try:
@@ -21,7 +34,7 @@ while True:
         else:
             print("That wasn't one of the numbers in the list. Try again.")
     except ValueError:
-        print("That wasn't one of the numbers in the list. Try again.")
+        print("That's not a number. Try again.")
 last_num = lucky_numbers[-1]
 lucky_numbers.pop()
 print("I've decided I don't like the last number, " + str(last_num) + ". Get POPPED son. The REAL winning lottery numbers are: " + str(lucky_numbers) + " (until I decide to change them again!)")
