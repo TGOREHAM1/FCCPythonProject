@@ -3,7 +3,7 @@
 # friends.sort() <--- Sorts alphabetical!
 # print(friends)
 
-lucky_numbers = [49, 8, 15, 16, 23, 42]
+lucky_numbers = [49, 8, 27, 16, 56, 42]
 print("The winning lottery numbers are: " + str(lucky_numbers))
 missing_number = int(input("What number did I forget? "))
 lucky_numbers.append(missing_number)
