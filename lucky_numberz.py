@@ -1,8 +1,3 @@
-# === OLD LIST: ===
-# friends = ["Aleks", "Sam", "Pete", "Noone else"]
-# friends.sort() <--- Sorts alphabetical!
-# print(friends)
-
 lucky_numbers = [49, 8, 27, 16, 56, 42]
 print("The winning lottery numbers are: " + str(lucky_numbers))
 while True:
